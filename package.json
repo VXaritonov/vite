@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.39",
@@ -56,14 +57,14 @@
   },
   "lint-staged": {
     "src/**/*{tsx,ts}": [
-      "npm run lint",
       "npm run prettier",
-      "git add"
+      "git add",
+      "npm run lint"
     ],
     "*.css": [
-      "npm run stylelint",
       "npm run prettier",
-      "git add"
+      "git add",
+      "npm run stylelint"
     ]
   },
   "jest": {

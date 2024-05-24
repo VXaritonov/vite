@@ -21,12 +21,15 @@
   },
   "plugins": ["react-refresh", "jest"],
   "rules": {
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "indent": ["error", 4],
     "react-refresh/only-export-components": [
       "warn",
       { "allowConstantExport": true }
     ],
+    "no-restricted-exports": ["error", { "restrictDefaultExports": { "defaultFrom": false } }],
+    "import/extensions": ["error", "never"],
     // TODO: fix this
     "import/no-unresolved": "off",
     "import/no-absolute-path": "off"
