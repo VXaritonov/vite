@@ -1,6 +1,6 @@
 {
   "root": true,
-  "env": { "browser": true, "es2020": true },
+  "env": { "browser": true, "es2020": true, "jest": true },
   "extends": [
     "eslint:recommended",
     "plugin:import/recommended",
@@ -11,7 +11,7 @@
     "airbnb",
     "prettier"
   ],
-  "ignorePatterns": ["dist", ".eslintrc.cjs", "vite.config.ts", "coverage"],
+  "ignorePatterns": ["dist", ".eslintrc.cjs", "vite.config.ts", "coverage", "cypress", "cypress.config.ts"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -19,7 +19,7 @@
     "project": ["./tsconfig.json", "./tsconfig.node.json"],
     "tsconfigRootDir": "./"
   },
-  "plugins": ["react-refresh"],
+  "plugins": ["react-refresh", "jest"],
   "rules": {
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "indent": ["error", 4],
