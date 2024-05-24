@@ -1,4 +1,4 @@
-import * as utils from "./utils.tsx";
+import * as utils from "./utils.ts";
 
 describe("math module", () => {
     test("adds 1 + 2 to equal 3", () => {
