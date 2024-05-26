@@ -1,5 +1,5 @@
 import React from "react";
-import { RouterProvider, createBrowserRouter, HashRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import MainPage from "src/containers/main-page";
 import Page1 from "src/containers/page1";
@@ -29,13 +29,9 @@ const router = createBrowserRouter(
             ],
         },
     ],
-    { basename: "/vite" },
+    { basename: import.meta.env.BASE_URL },
 );
 
-const Routing = React.memo(() => (
-    <HashRouter>
-        <RouterProvider router={router} />
-    </HashRouter>
-));
+const Routing = React.memo(() => <RouterProvider router={router} />);
 
 export default Routing;
