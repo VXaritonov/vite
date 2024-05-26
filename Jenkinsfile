@@ -6,5 +6,10 @@ pipeline {
                 powershell "npm install"
             }
         }
+        stage('Test') {
+            steps {
+                powershell "npm run test"
+            }
+        }
     }
 }
