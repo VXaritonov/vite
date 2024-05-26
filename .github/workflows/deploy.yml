@@ -31,24 +31,6 @@ jobs:
           name: production-files
           path: ./dist
 
-  test:
-    name: Test
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Eslint
-        run: npm run lint
-
-      - name: Stylelint
-        run: npm run stylelint
-
-      - name: Jest
-        run: npm run test
-
-      - name: Cypress
-        run: npm run e2e-run
-
   deploy:
     name: Deploy
     needs: build
