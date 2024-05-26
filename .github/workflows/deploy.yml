@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: Eslint
-      uses: npm run lint
+      - name: Eslint
+        uses: npm run lint
 
-      -name: Stylelint
-      uses: npm run stylelint
+      - name: Stylelint
+        uses: npm run stylelint
 
-      -name: Jest
-      uses: npm run test
+      - name: Jest
+        uses: npm run test
 
-      -name: Cypress
-      uses: npm run e2e-run
+      - name: Cypress
+        uses: npm run e2e-run
 
   build:
     name: Build
