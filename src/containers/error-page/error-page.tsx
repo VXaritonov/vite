@@ -1,5 +1,5 @@
 import React from "react";
 
-const ErrorPage = () => <div>ErrorPage</div>;
+const ErrorPage = React.memo(() => <div>ErrorPage</div>);
 
 export default ErrorPage;

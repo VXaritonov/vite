@@ -29,6 +29,6 @@ const router = createBrowserRouter([
     },
 ]);
 
-const Routing = () => <RouterProvider router={router} />;
+const Routing = React.memo(() => <RouterProvider router={router} />);
 
 export default Routing;
