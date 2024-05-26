@@ -38,16 +38,16 @@ jobs:
 
     steps:
       - name: Eslint
-        uses: npm run lint
+        run: npm run lint
 
       - name: Stylelint
-        uses: npm run stylelint
+        run: npm run stylelint
 
       - name: Jest
-        uses: npm run test
+        run: npm run test
 
       - name: Cypress
-        uses: npm run e2e-run
+        run: npm run e2e-run
 
   deploy:
     name: Deploy
