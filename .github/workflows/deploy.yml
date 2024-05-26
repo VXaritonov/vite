@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build
+  dependencies:
+    name: Install dependencies
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+  build:
+    name: Build
+    needs: dependencies
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Build project
         run: npm run build
 
