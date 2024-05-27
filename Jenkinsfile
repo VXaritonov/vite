@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Docker image') {
             steps {
-                powershell "docker build -t vite3.0 ."
+                powershell "docker build -t vite.${currentBuild.startTimeInMillis} ."
             }
         }
     }
