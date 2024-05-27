@@ -19,5 +19,10 @@ pipeline {
                 powershell "npm run build"
             }
         }
+        stage('Docker image') {
+            steps {
+                powershell "docker build -t vite3.0 ."
+            }
+        }
     }
 }
