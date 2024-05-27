@@ -20,12 +20,8 @@ pipeline {
             }
         }
         stage('Docker image') {
-            environment { 
-                now = new Date()
-            }
             steps {
-                def now = new Date()
-                powershell "docker build -t vite.$now ."
+                powershell "docker build -t vite.${Util.getTimeSpanString(System.currentTimeMillis())} ."
             }
         }
     }
