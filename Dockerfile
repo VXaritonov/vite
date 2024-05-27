@@ -1,7 +1,5 @@
 FROM node
 
-ENV TEST_ENV = 123
-
 WORKDIR /app
 
 COPY package.json .
